@@ -2,7 +2,7 @@
 const express = require("express")
 const router = express.Router()
 const { protect } = require("../middleware/authMiddleware")
-const { startGame, playMove, getGameState } = require("../controllers/gamecontroller")
+const { startGame, playMove, getGameState } = require("../controllers/gameController")
 
 router.post("/start", protect, startGame)
 router.post("/move", protect, playMove)
